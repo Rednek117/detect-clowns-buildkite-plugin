@@ -7,7 +7,13 @@ echo "$BUILDKITE_BUILD_CHECKOUT_PATH"
 if grep -inr -C1 "🤡" . ; then
   echo "^^^ +++"
   echo "+++ :warning: Detected clowns! 🔪"
-  #exit 1
+  echo "--- Removing Clowns 🤡"
+  find . -type f -name '*.txt' -o -name '*.md' -o -name '*.sh' | while read -r file; do
+    sed -i 's/🤡//g' "$file"
+    echo "Removed clowns from $file"
+  done
+  echo "--- Clown removal complete."
 else
   echo "No clowns detected."
 fi
+exit 0
