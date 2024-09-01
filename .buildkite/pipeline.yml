@@ -1,7 +1,7 @@
 steps:
   - plugins:
       - detect-clowns#v2.0.0: ~
-  - label: "🤡 :hammer:"
+  - label: ":hammer:"
     plugins:
       - plugin-tester#v1.1.1: ~
 

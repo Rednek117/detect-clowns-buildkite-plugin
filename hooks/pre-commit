@@ -1,5 +1,5 @@
 #!/bin/bash
-if grep -r "🤡" .; then
+if grep -r " " .; then
   echo "Commit rejected: clown emojis are not allowed."
   exit 1
 fi
