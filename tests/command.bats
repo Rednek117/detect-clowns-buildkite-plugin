@@ -18,9 +18,8 @@ trap cleanup EXIT
 
   run "$command_hook"
 
-  assert_success
+  assert_failure
   assert_output --partial "Detected clowns"
-  assert_output --partial "Removed clowns from $tmp_dir/code.txt"
 }
 
 @test "Command succeeds if clowns do not exist" {
