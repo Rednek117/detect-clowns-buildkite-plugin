@@ -18,7 +18,7 @@ trap cleanup EXIT
 
   run "$command_hook"
 
-  assert_success
+  assert_failure
   assert_output --partial "Detected clowns"
 }
 
